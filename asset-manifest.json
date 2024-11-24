@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-multi-cuisine-pos-app-v3/static/css/main.a9bc1250.css",
+    "main.js": "/react-multi-cuisine-pos-app-v3/static/js/main.094ef3fd.js",
+    "static/js/453.13778412.chunk.js": "/react-multi-cuisine-pos-app-v3/static/js/453.13778412.chunk.js",
+    "index.html": "/react-multi-cuisine-pos-app-v3/index.html",
+    "main.a9bc1250.css.map": "/react-multi-cuisine-pos-app-v3/static/css/main.a9bc1250.css.map",
+    "main.094ef3fd.js.map": "/react-multi-cuisine-pos-app-v3/static/js/main.094ef3fd.js.map",
+    "453.13778412.chunk.js.map": "/react-multi-cuisine-pos-app-v3/static/js/453.13778412.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9bc1250.css",
+    "static/js/main.094ef3fd.js"
+  ]
+}

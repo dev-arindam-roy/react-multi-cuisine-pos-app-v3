@@ -5,8 +5,8 @@
 
 ![2024-11-24_212500](https://github.com/user-attachments/assets/e13ee5e5-b388-43af-b123-6f3fa45bb75d)
 
+![2024-11-24_233851](https://github.com/user-attachments/assets/ceadefdd-ed9e-45e2-925d-74f9d7afba2f)
 
-![2024-11-24_212500](https://github.com/user-attachments/assets/08fa64c1-fa9f-48bb-890a-2e7d8e174e8a)
 
 
 ## Check the Application

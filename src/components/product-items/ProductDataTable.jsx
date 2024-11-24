@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import DataTable from "react-data-table-component";
 import ProductDataTableAction from "./ProductDataTableAction";
 import ProductDataTableSubHeader from "./ProductDataTableSubHeader";
+import ProductDataTableDetailsView from "./ProductDataTableDetailsView";
 import Button from "react-bootstrap/Button";
 import { FiPlus, FiArrowDownCircle, FiArrowUpCircle } from "react-icons/fi";
 import { jsonToCsv } from "../../helpers/Helpers";
@@ -87,7 +88,7 @@ const ProductDataTable = ({
   };
 
   const handleExpendableRows = ({ data }) => {
-    return <pre>{JSON.stringify(data, null, 2)}</pre>;
+    return <ProductDataTableDetailsView sendItemData={data} />;
   };
 
   const emitOnDataTableSearchItems = (searchTxt = null) => {

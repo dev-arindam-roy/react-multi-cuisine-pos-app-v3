@@ -214,6 +214,10 @@ const PosContainer = () => {
     toast.success(`${updatedPosBill?.items.length} - Products are added to billing`);
   };
 
+  const emitSendOnResetMultiProductAddedNotification = () => {
+    setIsMultipleProductAdded(false);
+  }
+
   const emitOnBillItemRemoveHandler = (billProductItemId) => {
     if (!billProductItemId) {
       toast.dismiss();
@@ -573,6 +577,7 @@ const PosContainer = () => {
               onAddPosItem={emitOnAddPosItemHandler}
               onAddMultiplePosItem={emitOnAddMultiplePosItemHandler}
               sendIsMultipleProductAdded={isMultipleProductAdded}
+              sendOnResetMultiProductAddedNotification={emitSendOnResetMultiProductAddedNotification}
             />
           </Col>
           <Col xs={12} sm={12} md={6}>

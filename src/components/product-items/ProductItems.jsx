@@ -7,8 +7,10 @@ const ProductItems = ({
   onAddPosItem,
   onAddMultiplePosItem,
   sendIsMultipleProductAdded,
+  sendOnResetMultiProductAddedNotification
 }) => {
   const [products, setProducts] = useState([]);
+  const [isMultiProductAdded, setIsMultiProductAdded] = useState(false);
 
   const emitReceivedOnAddPosItem = (selectedProductId) => {
     onAddPosItem(selectedProductId);
@@ -25,6 +27,10 @@ const ProductItems = ({
       setProducts([]);
     }
   }, [sendProductList]);
+
+  useEffect(() => {
+    setIsMultiProductAdded(sendIsMultipleProductAdded);
+  }, [sendIsMultipleProductAdded]);
   return (
     <>
       <Card>
@@ -35,7 +41,8 @@ const ProductItems = ({
             receivedOnSelectedItemsAddToPos={
               emitReceivedOnSelectedItemsAddToPos
             }
-            sendIsMultipleProductAdded={sendIsMultipleProductAdded}
+            sendIsMultipleProductAdded={isMultiProductAdded}
+            onResetMultiProductAddedNotification={sendOnResetMultiProductAddedNotification}
           />
         </Card.Body>
       </Card>

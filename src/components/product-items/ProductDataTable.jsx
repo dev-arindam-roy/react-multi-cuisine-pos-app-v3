@@ -11,11 +11,13 @@ const ProductDataTable = ({
   receivedOnAddPosItem,
   receivedOnSelectedItemsAddToPos,
   sendIsMultipleProductAdded,
+  onResetMultiProductAddedNotification
 }) => {
   const [products, setProducts] = useState([]);
   const [filterData, setFilterData] = useState([]);
   const [selectedItemRows, setSelectedItemRows] = useState([]);
   const [search, SetSearch] = useState("");
+  const [selectedRowClear, setSelectedRowClear] = useState(false);
   const columns = [
     {
       name: "SL.",
@@ -135,6 +137,11 @@ const ProductDataTable = ({
   useEffect(() => {
     setProducts(sendProductItems);
   }, [sendProductItems]);
+
+  useEffect(() => {
+    setSelectedRowClear(sendIsMultipleProductAdded);
+    onResetMultiProductAddedNotification();
+  }, [sendIsMultipleProductAdded])
   return (
     <>
       <DataTable
@@ -151,7 +158,7 @@ const ProductDataTable = ({
         selectableRows
         onSelectedRowsChange={handleSelectedRows}
         selectableRowsHighlight
-        clearSelectedRows={sendIsMultipleProductAdded}
+        clearSelectedRows={selectedRowClear}
         expandableRows
         expandableRowsComponent={handleExpendableRows}
         expandableIcon={{
